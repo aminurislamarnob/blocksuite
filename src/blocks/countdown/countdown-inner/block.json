@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blocksuite/countdown-inner",
+  "version": "0.1.0",
+  "title": "Countdown Content",
+  "category": "blocksuite",
+  "parent": ["blocksuite/countdown"],
+  "description": "Inner content shown by countdown rules.",
+  "textdomain": "blocksuite",
+  "attributes": {
+    "location": {
+      "type": "string",
+      "default": "complete"
+    }
+  },
+  "supports": {
+    "inserter": false,
+    "reusable": false,
+    "html": false
+  },
+  "editorScript": "file:./index.js"
+}

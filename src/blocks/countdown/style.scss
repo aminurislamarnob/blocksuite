@@ -1,0 +1,60 @@
+.blocksuite-countdown-container {
+	padding: 1em;
+	border: 0 solid transparent;
+	position: relative;
+}
+
+.blocksuite-countdown-timer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem;
+}
+
+.blocksuite-countdown-item {
+	display: flex;
+	align-items: flex-end;
+}
+
+.blocksuite-countdown-layout-block .blocksuite-countdown-item {
+	flex-direction: column;
+	align-items: center;
+	min-width: 1.8em;
+	padding: 0.3rem;
+	border: 0 solid transparent;
+}
+
+.blocksuite-countdown-number {
+	font-size: 2rem;
+	line-height: 1;
+}
+
+.blocksuite-countdown-label {
+	font-size: 0.85rem;
+	text-transform: uppercase;
+}
+
+.blocksuite-countdown-item-pre,
+.blocksuite-countdown-item-post {
+	flex-basis: 100%;
+}
+
+.blocksuite-countdown-layout-inline .blocksuite-countdown-item-pre,
+.blocksuite-countdown-layout-inline .blocksuite-countdown-item-post {
+	flex-basis: auto;
+}
+
+.blocksuite-countdown-align-left .blocksuite-countdown-timer {
+	justify-content: flex-start;
+}
+
+.blocksuite-countdown-align-center .blocksuite-countdown-timer {
+	justify-content: center;
+}
+
+.blocksuite-countdown-align-right .blocksuite-countdown-timer {
+	justify-content: flex-end;
+}
+
+.blocksuite-countdown-inner-complete {
+	display: none;
+}

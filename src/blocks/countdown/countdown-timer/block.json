@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blocksuite/countdown-timer",
+  "version": "0.1.0",
+  "title": "Countdown Timer",
+  "category": "blocksuite",
+  "parent": ["blocksuite/countdown"],
+  "description": "Timer renderer for countdown parent block.",
+  "textdomain": "blocksuite",
+  "attributes": {
+    "uniqueID": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "inserter": false,
+    "reusable": false,
+    "html": false
+  },
+  "editorScript": "file:./index.js"
+}

@@ -1,0 +1,89 @@
+.wp-block-blocksuite-accordion-item {
+	margin: 0;
+}
+
+.blocksuite-accordion-item__header-wrap {
+	margin: 0;
+	padding: 0;
+}
+
+.blocksuite-accordion-item__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #d9d9d9;
+	border-radius: 6px;
+	background: #f9fafb;
+	color: #1f2937;
+	font-weight: 600;
+	text-align: left;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.blocksuite-accordion-item__header:hover {
+	background: #f3f4f6;
+}
+
+.blocksuite-accordion-item__header.is-active {
+	background: #eaf3ff;
+}
+
+.blocksuite-accordion-item__panel {
+	border: 1px solid #d9d9d9;
+	border-top: 0;
+	border-radius: 6px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	background: #fff;
+	display: block;
+}
+
+.blocksuite-accordion-item__panel-hidden {
+	max-height: 0 !important;
+	overflow: hidden;
+	display: none;
+}
+
+.blocksuite-accordion-item__panel-inner {
+	padding: 12px;
+	border-top: 1px solid #efefef;
+}
+
+.blocksuite-accordion-initialized .blocksuite-panel-is-collapsing,
+.blocksuite-accordion-initialized .blocksuite-panel-is-expanding {
+	transition: height 0.35s ease;
+	position: relative;
+	height: 0;
+	overflow: hidden;
+}
+
+.blocksuite-accordion-item__header .blocksuite-accordion-item__icon {
+	display: block;
+	position: relative;
+	width: 16px;
+	height: 16px;
+	min-width: 16px;
+}
+
+.blocksuite-accordion-item__header .blocksuite-accordion-item__icon::before,
+.blocksuite-accordion-item__header .blocksuite-accordion-item__icon::after {
+	content: '';
+	position: absolute;
+	top: 7px;
+	left: 2px;
+	width: 12px;
+	height: 2px;
+	background: currentColor;
+	transition: transform 0.2s ease;
+}
+
+.blocksuite-accordion-item__header .blocksuite-accordion-item__icon::after {
+	transform: rotate(90deg);
+}
+
+.blocksuite-accordion-item__header.is-active .blocksuite-accordion-item__icon::after {
+	transform: rotate(0deg);
+}

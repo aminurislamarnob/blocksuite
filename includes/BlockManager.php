@@ -20,8 +20,7 @@ class BlockManager {
 	 * @return void
 	 */
 	public function register_blocks() {
-		$pattern     = BLOCKSUITE_BUILD_DIR . '/blocks/*/block.json';
-		$block_files = glob( $pattern );
+		$block_files = $this->get_block_json_files();
 
 		if ( empty( $block_files ) ) {
 			return;
@@ -31,6 +30,33 @@ class BlockManager {
 			$block_dir = dirname( $block_file );
 			register_block_type( $block_dir );
 		}
+	}
+
+	/**
+	 * Get all block.json files recursively from build/blocks.
+	 *
+	 * @return array
+	 */
+	private function get_block_json_files() {
+		$blocks_dir = BLOCKSUITE_BUILD_DIR . '/blocks';
+
+		if ( ! is_dir( $blocks_dir ) ) {
+			return [];
+		}
+
+		$iterator = new \RecursiveIteratorIterator(
+			new \RecursiveDirectoryIterator( $blocks_dir, \FilesystemIterator::SKIP_DOTS )
+		);
+
+		$block_files = [];
+
+		foreach ( $iterator as $file ) {
+			if ( $file->isFile() && 'block.json' === $file->getFilename() ) {
+				$block_files[] = $file->getPathname();
+			}
+		}
+
+		return $block_files;
 	}
 
 	/**

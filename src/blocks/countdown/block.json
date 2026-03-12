@@ -1,0 +1,91 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blocksuite/countdown",
+  "version": "0.1.0",
+  "title": "Countdown",
+  "category": "blocksuite",
+  "icon": "clock",
+  "description": "Countdown timer with configurable units and expire content.",
+  "textdomain": "blocksuite",
+  "attributes": {
+    "uniqueID": {
+      "type": "string",
+      "default": ""
+    },
+    "timestamp": {
+      "type": "number",
+      "default": 0
+    },
+    "expireAction": {
+      "type": "string",
+      "default": "none"
+    },
+    "showDays": {
+      "type": "boolean",
+      "default": true
+    },
+    "showHours": {
+      "type": "boolean",
+      "default": true
+    },
+    "showMinutes": {
+      "type": "boolean",
+      "default": true
+    },
+    "showSeconds": {
+      "type": "boolean",
+      "default": true
+    },
+    "timerLayout": {
+      "type": "string",
+      "default": "block"
+    },
+    "countdownDivider": {
+      "type": "boolean",
+      "default": false
+    },
+    "timeNumbers": {
+      "type": "boolean",
+      "default": false
+    },
+    "counterAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "preLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "postLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "daysLabel": {
+      "type": "string",
+      "default": "Days"
+    },
+    "hoursLabel": {
+      "type": "string",
+      "default": "Hrs"
+    },
+    "minutesLabel": {
+      "type": "string",
+      "default": "Mins"
+    },
+    "secondsLabel": {
+      "type": "string",
+      "default": "Secs"
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "html": false,
+    "reusable": false,
+    "anchor": true
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

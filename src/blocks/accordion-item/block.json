@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blocksuite/accordion-item",
+  "version": "0.1.0",
+  "title": "Accordion Item",
+  "category": "blocksuite",
+  "parent": ["blocksuite/accordion"],
+  "icon": "excerpt-view",
+  "description": "Single accordion item.",
+  "textdomain": "blocksuite",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": ".blocksuite-accordion-item__title",
+      "default": "Accordion Item"
+    }
+  },
+  "supports": {
+    "html": false,
+    "reusable": false
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
