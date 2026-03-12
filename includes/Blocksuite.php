@@ -127,6 +127,8 @@ final class Blocksuite {
         defined( 'BLOCKSUITE_PLUGIN_VERSION' ) || define( 'BLOCKSUITE_PLUGIN_VERSION', $this->version );
         defined( 'BLOCKSUITE_DIR' ) || define( 'BLOCKSUITE_DIR', dirname( BLOCKSUITE_FILE ) );
         defined( 'BLOCKSUITE_INC_DIR' ) || define( 'BLOCKSUITE_INC_DIR', BLOCKSUITE_DIR . '/includes' );
+        defined( 'BLOCKSUITE_SRC_DIR' ) || define( 'BLOCKSUITE_SRC_DIR', BLOCKSUITE_DIR . '/src' );
+        defined( 'BLOCKSUITE_BUILD_DIR' ) || define( 'BLOCKSUITE_BUILD_DIR', BLOCKSUITE_DIR . '/build' );
         defined( 'BLOCKSUITE_TEMPLATE_DIR' ) || define( 'BLOCKSUITE_TEMPLATE_DIR', BLOCKSUITE_DIR . '/templates' );
         defined( 'BLOCKSUITE_PLUGIN_ASSET' ) || define( 'BLOCKSUITE_PLUGIN_ASSET', plugins_url( 'assets', BLOCKSUITE_FILE ) );
         defined( 'BLOCKSUITE_PLUGIN_ADMIN_ASSET' ) || define( 'BLOCKSUITE_PLUGIN_ADMIN_ASSET' , BLOCKSUITE_PLUGIN_ASSET . '/admin' );
@@ -175,7 +177,7 @@ final class Blocksuite {
      * @return void
      */
     public function init_classes() {
-        $this->container['scripts'] = new Assets();
+        $this->container['blocks'] = new BlockManager();
     }
 
     /**
